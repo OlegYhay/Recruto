@@ -1,0 +1,21 @@
+{% extends 'base.html '%}
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center">
+    <form method="get" action="{% url 'welcome' %}">
+        <fieldset>
+            <legend>Отправьте Get запрос указав name и message</legend>
+            <div class="mb-3">
+                <label for="name" class="form-label">Введите name</label>
+                <input type="text" id="name" class="form-control" name="name" value = "Rekruto">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Введите message</label>
+                <input type="text" id="message" class="form-control" name="message" value = "Давай дружить">
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </fieldset>
+    </form>
+</div>
+<br/>
+<h6><p class="container d-flex align-items-center justify-content-center">Вы можете отправить get запрос через адресную строку в браузере добавив к url /apiv1/welcome/?name=Rekruto&message=Давай дружить</p></h6>
+{% endblock content %}
