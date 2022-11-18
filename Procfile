@@ -1,1 +1,2 @@
-web: gunicorn main.wsgi --log-file
+web: sh -c 'cd main && gunicorn main.wsgi --log-file=-'
+
