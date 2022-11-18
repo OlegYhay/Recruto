@@ -9,7 +9,7 @@ from rest_framework.views import APIView
 
 class HelloWorld(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'Hello.html'
+    template_name = 'hello.html'
 
     def get(self, request, *args, **kwargs):
         name = self.request.query_params.get("name", None)
